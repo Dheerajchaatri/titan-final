@@ -39,6 +39,10 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 
+/**
+ * Primary Public Job Portal Landing Page Component for root route `/`.
+ * Renders the public homepage for all visitors and logged-in users.
+ */
 export default function HomePage() {
   const router = useRouter();
   const { jobs } = useJobStore();
