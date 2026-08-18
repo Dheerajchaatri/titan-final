@@ -22,8 +22,41 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "TITAN - AI Powered Job Portal",
-  description: "Taj Institute of Technology & Applied Networks (TITAN) - Pakistan's smartest AI job matching portal.",
+  metadataBase: new URL("http://localhost:3001"),
+  title: {
+    default: "TITAN - AI Powered Job Portal | Find Jobs in Pakistan",
+    template: "%s | TITAN Job Portal",
+  },
+  description: "Taj Institute of Technology & Applied Networks (TITAN) - Pakistan's smartest AI job matching portal. Find verified jobs, analyze resumes with AI, and connect with top employers.",
+  keywords: [
+    "Jobs in Pakistan",
+    "IT Jobs Pakistan",
+    "Software Engineer Jobs",
+    "AI Job Matching",
+    "TITAN Job Portal",
+    "Remote Jobs",
+    "Lahore Jobs",
+    "Karachi Jobs",
+    "Islamabad Jobs",
+  ],
+  authors: [{ name: "TITAN" }],
+  creator: "Taj Institute of Technology & Applied Networks",
+  publisher: "TITAN Job Portal",
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "TITAN - AI Powered Job Portal | Find Jobs in Pakistan",
+    description: "Pakistan's smartest AI job matching portal. Search thousands of active jobs and analyze your resume with AI.",
+    url: "http://localhost:3001/",
+    siteName: "TITAN Job Portal",
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

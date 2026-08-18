@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion, Variants, Easing } from "framer-motion";
 
 interface BinocularCharacterProps {
   className?: string;
@@ -22,7 +22,7 @@ export const BinocularCharacter: React.FC<BinocularCharacterProps> = ({ classNam
    * Natural Human Searching Motion:
    * Starts immediately with continuous rotation & physical turning.
    */
-  const naturalSearchingVariants = {
+  const naturalSearchingVariants: Variants = {
     initial: { x: 0, y: 0, rotateZ: 0, scaleX: 1, scaleY: 1 },
     searching: shouldReduceMotion
       ? { x: 0, y: 0, rotateZ: 0, scaleX: 1, scaleY: 1 }
@@ -44,7 +44,7 @@ export const BinocularCharacter: React.FC<BinocularCharacterProps> = ({ classNam
           ],
           transition: {
             duration: 6.0,
-            ease: "easeInOut",
+            ease: "easeInOut" as Easing,
             repeat: Infinity,
             repeatDelay: 0,
             times: [
@@ -60,7 +60,7 @@ export const BinocularCharacter: React.FC<BinocularCharacterProps> = ({ classNam
       animate={{ y: 0, opacity: 1, scale: 1 }}
       transition={{
         duration: 0.3,
-        ease: "easeOut",
+        ease: "easeOut" as Easing,
       }}
       className={`relative flex items-center justify-center select-none ${className}`}
     >
@@ -78,7 +78,7 @@ export const BinocularCharacter: React.FC<BinocularCharacterProps> = ({ classNam
         }
         transition={{
           duration: 6.0,
-          ease: "easeInOut",
+          ease: "easeInOut" as Easing,
           repeat: Infinity,
           repeatDelay: 0,
           times: [

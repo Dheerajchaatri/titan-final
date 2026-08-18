@@ -87,7 +87,7 @@ export default function DynamicAdminPage({ params }: AdminPageProps) {
         <div className="flex flex-col gap-1.5 text-center">
           <h2 className="text-sm font-black text-primary-navy uppercase tracking-wider">Access Denied</h2>
           <p className="text-xs text-text-muted leading-relaxed font-semibold">
-            Administrators do not have access to candidate or recruiter workspace tools. Please use the Super Admin console dashboard to moderate logs and configuration keys instead.
+            Administrators do not have access to candidate or recruiter workspace tools. Please use the Admin console dashboard to moderate logs and configuration keys instead.
           </p>
         </div>
         <Button
@@ -297,7 +297,7 @@ export default function DynamicAdminPage({ params }: AdminPageProps) {
               </thead>
               <tbody className="divide-y divide-slate-100/50">
                 {[
-                  { name: "Admin System", role: "Super Admin", scope: "Full Access", login: "Just now", status: "Active" },
+                  { name: "Admin System", role: "System Admin", scope: "Full Access", login: "Just now", status: "Active" },
                   { name: "Dheeraj Dev", role: "Support Admin", scope: "Tickets & Messaging", login: "4 hours ago", status: "Active" },
                   { name: "Hamza Malik", role: "Security Admin", scope: "Audit Logs & Security", login: "Yesterday", status: "Active" }
                 ].map((row) => (
@@ -930,7 +930,7 @@ export default function DynamicAdminPage({ params }: AdminPageProps) {
               </thead>
               <tbody className="divide-y divide-slate-100/50">
                 {[
-                  { role: "Super Administrator", perms: "Full platform controls, configurations write, security audits, database drops", def: "Root Authority" },
+                  { role: "System Administrator", perms: "Full platform controls, configurations write, security audits, database drops", def: "Root Authority" },
                   { role: "Recruiter Account", perms: "Vacancies postings, candidates search, shortlists access, interview calendar sync", def: "Employer Console" },
                   { role: "Job Seeker Candidate", perms: "Job submissions, resume builder form editor, AI assistant chats, profile updates", def: "Candidate Console" }
                 ].map((row, idx) => (

@@ -380,7 +380,7 @@ export const useUserStore = create<UserState>()(
         let name = currentUser.name;
         if (role === "candidate") name = "Ahmad Raza";
         else if (role === "employer") name = "Sarah Khan";
-        else name = "Super Admin";
+        else name = "Admin System";
 
         set({
           user: {
